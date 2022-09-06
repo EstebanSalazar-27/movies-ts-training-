@@ -1,0 +1,9 @@
+
+.modalHidden{
+    display: none;
+   transform: scale(0);
+}
+.modalVisible{
+    display: grid;
+    transform: scale(1);
+}
