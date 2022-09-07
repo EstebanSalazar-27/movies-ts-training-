@@ -21,8 +21,8 @@ export const ListOfPrograms = ({ children }: ListOfProgramsProps) => {
                 <Title
                     stylesTitle={{
                         color: "text-stone-800",
-                        font_size: "text-2xl",
-                        font_weight: "font-bold"
+                        font_size: "text-3xl",
+                        font_weight: "font-bold capitalize "
                     }}
                 >
                     {query ? query : "home"}

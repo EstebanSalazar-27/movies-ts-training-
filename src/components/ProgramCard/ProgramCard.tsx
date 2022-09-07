@@ -16,17 +16,14 @@ export type ProgramCardProps = {
 
 export const ProgramCard = ({ id, mediaType, overview, popularity, posterPath, title, loading }: ProgramCardProps) => {
   const [showModal, setShowModal] = useState<boolean>(false)
-
-
   const modalVisibleStyles = showModal ? "modalVisible" : 'modalHidden'
-  console.log(showModal)
-  console.log(modalVisibleStyles)
   function handleVisibilityModal() {
     setShowModal(true)
   }
   function handleMouseOut() {
     setShowModal(false)
   }
+  
   const skeleton = loading || !posterPath ? "animate-pulse" : ""
   function getPosterPath(posterPath: string): string {
     const posterBaseUrl = `https://image.tmdb.org/t/p/w200/${posterPath}`

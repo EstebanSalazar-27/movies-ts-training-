@@ -64,8 +64,8 @@ export enum OriginalLanguagePopular {
 type SearchResultExclutions =
     'first_air_date' | "media_type" | "genre_ids" | "origin_country" | "original_title" | "original_title" | "popularity" | "release_date" | "title" | "video" | "vote_average"
     | "vote_count";
-type SearchResults = Omit<TrendingResponseApi, SearchResultExclutions>
-export interface SearchResponse {
+export type SearchResults = Omit<TrendingResponseApi, SearchResultExclutions>
+export interface SearchResponseApi {
     page: number;
     results: SearchResults[];
     total_pages: number;

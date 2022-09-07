@@ -7,6 +7,7 @@ enum bgColor {
 }
 type CustomProps = {
     children: NATIVES_JSX_TYPES["children"] | string;
+    disabledBtn: boolean;
     fnActions?: {
         nextPage?: () => void,
         prevPage?: () => void
@@ -21,11 +22,13 @@ type CustomProps = {
         bgColor?: string,
     };
 }
-export const CustomizableBtn = ({ fnActions, stylesBtn, children }: CustomProps) => {
-
+export const CustomizableBtn = ({ fnActions, stylesBtn, children, disabledBtn }: CustomProps) => {
+    const disabledBtnStyles = disabledBtn ? "bg-sky-800/90" : ""
     return (
         <button
+            disabled={disabledBtn}
             className={`
+            ${disabledBtnStyles}
             ${stylesBtn.bgColor}
              ${stylesBtn.color}
               ${stylesBtn.fontSize}

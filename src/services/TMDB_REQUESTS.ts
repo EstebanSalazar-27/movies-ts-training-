@@ -28,8 +28,8 @@ export const getPupularPrograms = async (page: number = 1): Promise<TrendingResp
     console.log(result)
     return result
 }
-export const searchMovieByKeyword = async (page: number = 1, query: string = ""): Promise<TrendingResponseApi> => {
-    const response = await fetch(`${BASE_URL}search/collections?query=${query}&api_key=0e617d4abfa5c6d024f3f22083895328&page=${page}
+export const searchMovieByKeyword = async (page: number = 1, query: string | null = ""): Promise<TrendingResponseApi> => {
+    const response = await fetch(`${BASE_URL}search/collection?query=${query}&api_key=0e617d4abfa5c6d024f3f22083895328&page=${page}
     `, {
         method: 'GET',
         headers: {}
